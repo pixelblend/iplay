@@ -15,7 +15,7 @@ module Snowblink
       
       def self.id_for(name)
         listing_page = name.scan(/^[^a-z0-9]*([a-z0-9])/i).flatten.first.downcase
-        listing_page = '@' if listing_page =~ /[0-9]/ 
+        listing_page = '@' if listing_page =~ /[0-9]/
         
         a_z = "#{BBC_PROGRAMMES_URL}a-z/by/#{listing_page}"
         doc = Hpricot(open(a_z))
