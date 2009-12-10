@@ -24,7 +24,7 @@ class ProgrammeTest < Test::Unit::TestCase
 
     context "and looking for a programme id" do
       setup do
-        listing = File.dirname(__FILE__) + '/lib/t_listing.html'
+        listing = File.dirname(__FILE__) + '/lib/t_listing.html' 
         Snowblink::Iplay::Programme.stubs(:open).returns(File.open(listing).read)
       end
 
